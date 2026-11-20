@@ -1,0 +1,33 @@
+2026-11-20 00:09:38 | INFO    | ===== Inicio de la simulacion Software FJ =====
+2026-11-20 00:09:38 | INFO    | Cliente registrado: CLI-001 | Ana Torres | Doc: 1023456789 | ana.torres@correo.com | Tel: ******7890
+2026-11-20 00:09:38 | INFO    | Cliente registrado: CLI-002 | Luis Gomez | Doc: 80123456 | luis.gomez@correo.com | Tel: ******6543
+2026-11-20 00:09:38 | ERROR   | registrar_cliente -> [ERR-DAT] Dato invalido en 'correo' ('pedro.correo.com'): formato de correo no valido
+2026-11-20 00:09:38 | ERROR   | registrar_cliente -> [ERR-DAT] Dato invalido en 'nombre' ('M4ria'): solo letras y minimo 3 caracteres
+2026-11-20 00:09:38 | ERROR   | registrar_cliente -> [ERR-DAT] Dato invalido en 'documento' ('12AB'): debe tener entre 6 y 10 digitos
+2026-11-20 00:09:38 | ERROR   | registrar_cliente -> [ERR-PAR] Falta el parametro obligatorio 'telefono'
+2026-11-20 00:09:38 | ERROR   | registrar_cliente -> [ERR-OPE] Ya existe un cliente con documento 1023456789
+2026-11-20 00:09:38 | INFO    | Servicio creado: SRV-001 | Sala 'Sala Andes' | 30 personas | $50,000/h
+2026-11-20 00:09:38 | INFO    | Servicio creado: SRV-002 | Equipo 'Portatiles' x3 | $15,000/h | deposito $100,000
+2026-11-20 00:09:38 | INFO    | Servicio creado: SRV-003 | Asesoria 'Asesoria en Redes' | nivel experto | $120,000/h
+2026-11-20 00:09:38 | ERROR   | agregar_servicio(ReservaSala) -> [ERR-DAT] Dato invalido en 'tarifa_hora' (-20000): debe ser un numero mayor que 0
+2026-11-20 00:09:38 | ERROR   | agregar_servicio(Asesoria) -> [ERR-DAT] Dato invalido en 'nivel' ('maestro'): debe ser uno de ['basico', 'intermedio', 'experto']
+2026-11-20 00:09:38 | ERROR   | agregar_servicio(AlquilerEquipo) -> AlquilerEquipo.__init__() missing 2 required positional arguments: 'cantidad' and 'deposito'
+2026-11-20 00:09:38 | INFO    | Reserva RES-001 confirmada. Total: $257,040.00
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | INFO    | Reserva RES-002 confirmada. Total: $606,900.00
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | ERROR   | crear_reserva -> [ERR-RES] Duracion no valida para Portatiles | Causa original: DatosInvalidosError: [ERR-DAT] Dato invalido en 'horas' (1): el alquiler va de 2 a 72 horas
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | ERROR   | crear_reserva -> [ERR-RES] La reserva necesita un cliente valido
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | ERROR   | crear_reserva -> [ERR-RES] No se pudo calcular el costo de RES-003 | Causa original: DatosInvalidosError: [ERR-DAT] Dato invalido en 'descuento' (0.9): debe estar entre 0 y 0.5
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | INFO    | Reserva RES-001 procesada para Ana Torres
+2026-11-20 00:09:38 | INFO    | Intento de procesamiento de RES-001 finalizado (estado: PROCESADA)
+2026-11-20 00:09:38 | ERROR   | crear_reserva -> [ERR-SRV] El servicio 'Sala Andes' no esta disponible
+2026-11-20 00:09:38 | INFO    | Fin del intento de crear reserva
+2026-11-20 00:09:38 | ERROR   | cancelar -> [ERR-OPE] No se puede cancelar RES-001: ya esta PROCESADA
+2026-11-20 00:09:38 | INFO    | Reserva RES-002 cancelada. Motivo: Cambio de fecha
+2026-11-20 00:09:38 | ERROR   | procesar -> [ERR-OPE] Solo se procesan reservas confirmadas (RES-002 esta CANCELADA)
+2026-11-20 00:09:38 | INFO    | Intento de procesamiento de RES-002 finalizado (estado: CANCELADA)
+2026-11-20 00:09:38 | INFO    | ===== Fin de la simulacion =====
